@@ -10,15 +10,25 @@ function About() {
       id="about"
       aria-labelledby="about-title"
     >
-      <SectionHeading id="about-title">{about.title}</SectionHeading>
-      <motion.div className="about__content" {...reveal}>
-        <p className="about__body">{about.body}</p>
-        <ul className="about__tags" aria-label="Technologies">
-          {about.tagGroups.map((group) => (
-            <li key={group.join('-')}>{group.join(' · ')}</li>
-          ))}
-        </ul>
-      </motion.div>
+      <div className="about__layout">
+        <div className="about__main">
+          <SectionHeading id="about-title">{about.title}</SectionHeading>
+          <motion.p className="about__body" {...reveal}>
+            {about.body}
+          </motion.p>
+        </div>
+        <motion.div className="about__stack" {...reveal}>
+          <h3 className="about__stack-title">Tech stack</h3>
+          <dl className="about__stack-list">
+            {about.techStack.map((item) => (
+              <div className="about__stack-row" key={item.label}>
+                <dt>{item.label}</dt>
+                <dd>{item.value}</dd>
+              </div>
+            ))}
+          </dl>
+        </motion.div>
+      </div>
     </section>
   )
 }
