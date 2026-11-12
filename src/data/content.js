@@ -106,6 +106,14 @@ export const projects = [
     repoHref: "https://github.com/wickerxd/rick-and-morty-hero-task",
   },
   {
+    stack: "React 19 · TanStack v5 · Tailwind v4",
+    name: "Pokedex, Pokemon explorer",
+    description:
+      "A responsive Pokédex built with React and TypeScript, using the PokéAPI to explore over 1,300 Pokémon, wrapped in a retro-inspired interface.",
+    demoHref: "https://pokedex-react-pi.vercel.app",
+    repoHref: "https://github.com/wickerxd/pokedex-react",
+  },
+  {
     kind: "more",
     stack: "next",
     name: "More to come",
